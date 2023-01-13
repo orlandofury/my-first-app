@@ -12,6 +12,7 @@ import { Component } from '@angular/core';
 })
 export class ServersComponent {
   allowNewServer = false;
+  serverCreationStatus = 'No server was created!';
   /**
    *
    */
@@ -20,5 +21,9 @@ export class ServersComponent {
       this.allowNewServer = true;
     },2000);
     
+  }
+
+  onCreateServer(){
+    this.serverCreationStatus = 'Server was created!';
   }
 }
