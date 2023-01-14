@@ -14,6 +14,17 @@
                     color(ngClass)
                   </li>
                 </ol>
+                <button 
+                       class="btn btn=primary"
+                       (click) ="onToggleDisplay()">Display Details</button>
+                <p *ngIf="showSecret">Well my Password is maje</p>
+                <div 
+                *ngFor="let logItem of log"
+                [ngStyle]="{backgroundColor: logItem>= 5 ? 'blue':'transparent'}"
+                [ngClass]="{'white-text':logItem>=5}"
+                >
+                  {{ logItem }}
+                </div>
             </div>
         </div>
     </div>
